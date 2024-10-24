@@ -1,0 +1,32 @@
+﻿<Window x:Class="lib.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="300" ResizeMode="NoResize" AllowDrop="True" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Для заголовка -->
+            <RowDefinition Height="*"/>
+            <!-- Для основной части -->
+            <RowDefinition Height="Auto"/>
+            <!-- Для кнопки регистрации -->
+        </Grid.RowDefinitions>
+
+        <Label Content="Авторизация" HorizontalAlignment="Center" FontSize="24" Margin="0,10"/>
+
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Логин" HorizontalAlignment="Left" />
+            <TextBox Height="30" Width="250" Margin="0,5" />
+            <TextBlock Text="Пароль" HorizontalAlignment="Left"/>
+            <TextBox Height="30" Width="250" Margin="0,5"/>
+            <Button Content="Войти" Width="120" Margin="0,10" HorizontalAlignment="Center" Click="Button_Click"/>
+            <Button Content="Войти как гость" Width="120" Margin="0,10" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <Label Content="Зарегистрироваться" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,10,0"/>
+    </Grid>
+</Window>
